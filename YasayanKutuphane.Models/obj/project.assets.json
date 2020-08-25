@@ -8,23 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Elimirze\\.nuget\\packages\\": {},
+    "C:\\Users\\sedan\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Elimirze\\Desktop\\YeniWebProje\\YasayanKutuphane.Models\\YasayanKutuphane.Models.csproj",
+      "projectUniqueName": "D:\\Documents\\GitHub\\YeniWebProje\\YasayanKutuphane.Models\\YasayanKutuphane.Models.csproj",
       "projectName": "YasayanKutuphane.Models",
-      "projectPath": "C:\\Users\\Elimirze\\Desktop\\YeniWebProje\\YasayanKutuphane.Models\\YasayanKutuphane.Models.csproj",
-      "packagesPath": "C:\\Users\\Elimirze\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Elimirze\\Desktop\\YeniWebProje\\YasayanKutuphane.Models\\obj\\",
+      "projectPath": "D:\\Documents\\GitHub\\YeniWebProje\\YasayanKutuphane.Models\\YasayanKutuphane.Models.csproj",
+      "packagesPath": "C:\\Users\\sedan\\.nuget\\packages\\",
+      "outputPath": "D:\\Documents\\GitHub\\YeniWebProje\\YasayanKutuphane.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Elimirze\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sedan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -62,7 +62,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

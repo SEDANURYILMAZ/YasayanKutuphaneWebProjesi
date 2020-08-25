@@ -21,3 +21,15 @@ C:\Users\Elimirze\Documents\GitHub\.NetCore_RazorPage\YasayanKutuphane.Data\obj\
 C:\Users\Elimirze\Documents\GitHub\.NetCore_RazorPage\YasayanKutuphane.Data\obj\Debug\netcoreapp3.1\YasayanKutuphane.Data.dll
 C:\Users\Elimirze\Documents\GitHub\.NetCore_RazorPage\YasayanKutuphane.Data\obj\Debug\netcoreapp3.1\YasayanKutuphane.Data.pdb
 C:\Users\Elimirze\Desktop\YeniWebProje\YasayanKutuphane.Data\obj\Debug\netcoreapp3.1\YasayanKutuphane.Data.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\YeniWebProje\YasayanKutuphane.Data\bin\Debug\netcoreapp3.1\YasayanKutuphane.Data.deps.json
+D:\Documents\GitHub\YeniWebProje\YasayanKutuphane.Data\bin\Debug\netcoreapp3.1\YasayanKutuphane.Data.dll
+D:\Documents\GitHub\YeniWebProje\YasayanKutuphane.Data\bin\Debug\netcoreapp3.1\YasayanKutuphane.Data.pdb
+D:\Documents\GitHub\YeniWebProje\YasayanKutuphane.Data\bin\Debug\netcoreapp3.1\YasayanKutuphane.Models.dll
+D:\Documents\GitHub\YeniWebProje\YasayanKutuphane.Data\bin\Debug\netcoreapp3.1\YasayanKutuphane.Models.pdb
+D:\Documents\GitHub\YeniWebProje\YasayanKutuphane.Data\obj\Debug\netcoreapp3.1\YasayanKutuphane.Data.csprojAssemblyReference.cache
+D:\Documents\GitHub\YeniWebProje\YasayanKutuphane.Data\obj\Debug\netcoreapp3.1\YasayanKutuphane.Data.AssemblyInfoInputs.cache
+D:\Documents\GitHub\YeniWebProje\YasayanKutuphane.Data\obj\Debug\netcoreapp3.1\YasayanKutuphane.Data.AssemblyInfo.cs
+D:\Documents\GitHub\YeniWebProje\YasayanKutuphane.Data\obj\Debug\netcoreapp3.1\YasayanKutuphane.Data.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\YeniWebProje\YasayanKutuphane.Data\obj\Debug\netcoreapp3.1\YasayanKutuphane.Data.csproj.CopyComplete
+D:\Documents\GitHub\YeniWebProje\YasayanKutuphane.Data\obj\Debug\netcoreapp3.1\YasayanKutuphane.Data.dll
+D:\Documents\GitHub\YeniWebProje\YasayanKutuphane.Data\obj\Debug\netcoreapp3.1\YasayanKutuphane.Data.pdb

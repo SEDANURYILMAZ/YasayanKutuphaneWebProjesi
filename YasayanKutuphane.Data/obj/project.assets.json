@@ -5032,23 +5032,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Elimirze\\.nuget\\packages\\": {},
+    "C:\\Users\\sedan\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Elimirze\\Desktop\\YeniWebProje\\YasayanKutuphane.Data\\YasayanKutuphane.Data.csproj",
+      "projectUniqueName": "D:\\Documents\\GitHub\\YeniWebProje\\YasayanKutuphane.Data\\YasayanKutuphane.Data.csproj",
       "projectName": "YasayanKutuphane.Data",
-      "projectPath": "C:\\Users\\Elimirze\\Desktop\\YeniWebProje\\YasayanKutuphane.Data\\YasayanKutuphane.Data.csproj",
-      "packagesPath": "C:\\Users\\Elimirze\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Elimirze\\Desktop\\YeniWebProje\\YasayanKutuphane.Data\\obj\\",
+      "projectPath": "D:\\Documents\\GitHub\\YeniWebProje\\YasayanKutuphane.Data\\YasayanKutuphane.Data.csproj",
+      "packagesPath": "C:\\Users\\sedan\\.nuget\\packages\\",
+      "outputPath": "D:\\Documents\\GitHub\\YeniWebProje\\YasayanKutuphane.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Elimirze\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sedan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5061,8 +5061,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Elimirze\\Desktop\\YeniWebProje\\YasayanKutuphane.Models\\YasayanKutuphane.Models.csproj": {
-              "projectPath": "C:\\Users\\Elimirze\\Desktop\\YeniWebProje\\YasayanKutuphane.Models\\YasayanKutuphane.Models.csproj"
+            "D:\\Documents\\GitHub\\YeniWebProje\\YasayanKutuphane.Models\\YasayanKutuphane.Models.csproj": {
+              "projectPath": "D:\\Documents\\GitHub\\YeniWebProje\\YasayanKutuphane.Models\\YasayanKutuphane.Models.csproj"
             }
           }
         }
@@ -5100,7 +5100,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
