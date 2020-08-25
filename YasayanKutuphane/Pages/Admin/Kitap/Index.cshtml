@@ -1,0 +1,128 @@
+﻿@page
+@model YasayanKutuphane.Pages.Admin.Kitap.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@using  Microsoft.AspNetCore.Http;
+@if (HttpContext.Session.GetString("GirisYapanEmail") == "b161210115@sakarya.edu.tr")
+{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+
+    <h1>Başlangıç</h1>
+
+    <div class="row">
+        <div class="col-6">
+            <h2 class="text-primary">Kitaplar</h2>
+
+        </div>
+        <div class="col-6 text-right">
+            <a asp-page="Create" class="btn btn-primary">
+                <i class="fas fa-plus"></i> &nbsp;
+                Yeni Oluştur
+            </a>
+            <br /> <br />
+        </div>
+
+    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kitap[0].Kategori)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kitap[0].Dil)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kitap[0].Yayinevi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kitap[0].KapakTipi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kitap[0].KitapTuru)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kitap[0].Isim)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kitap[0].Tanitim)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kitap[0].KapakFotografi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kitap[0].BasimTarihi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kitap[0].SayfaSayisi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kitap[0].Puan)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Kitap)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Kategori.Isim)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Dil.Isim)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Yayinevi.Isim)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KapakTipi.Isim)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KitapTuru.Isim)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Isim)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tanitim)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KapakFotografi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BasimTarihi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SayfaSayisi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Puan)
+                    </td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@item.ID" class="btn btn-info">
+                            <i class="fas fa-edit"></i> &nbsp;
+                            Güncelle
+                        </a><br />
+                        <a asp-page="./Details" asp-route-id="@item.ID" class="btn btn-warning">
+                            <i class="fas fa-info-circle"></i> &nbsp;
+                            Ayrıntılar
+                        </a>
+                        <a asp-page="./Delete" asp-route-id="@item.ID" class="btn btn-danger">
+                            <i class="fas fa-trash-alt"></i> &nbsp;
+                            Sil &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h1>Bu Sayfaya Giriş Yetkiniz Yok!!!</h1>
+    <h3>Sayfayı görüntülemek için admin olarak giriş yapınız</h3>
+}

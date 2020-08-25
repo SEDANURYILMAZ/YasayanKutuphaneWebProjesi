@@ -1,0 +1,102 @@
+﻿@page
+@model YasayanKutuphane.Pages.Admin.Kitap.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+@using  Microsoft.AspNetCore.Http;
+@if (HttpContext.Session.GetString("GirisYapanEmail") == "b161210115@sakarya.edu.tr")
+{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+
+    <h1>Sil</h1>
+
+    <h3>Bu Verileri Silmek İstediğine Emin Misin?</h3>
+    <div>
+        <h4>Kitap</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Kitap.Kategori)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Kitap.Kategori.Isim)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Kitap.Dil)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Kitap.Dil.Isim)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Kitap.Yayinevi)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Kitap.Yayinevi.Isim)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Kitap.KapakTipi)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Kitap.KapakTipi.Isim)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Kitap.KitapTuru)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Kitap.KitapTuru.Isim)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Kitap.Isim)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Kitap.Isim)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Kitap.Tanitim)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Kitap.Tanitim)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Kitap.KapakFotografi)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Kitap.KapakFotografi)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Kitap.BasimTarihi)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Kitap.BasimTarihi)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Kitap.SayfaSayisi)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Kitap.SayfaSayisi)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Kitap.Puan)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Kitap.Puan)
+            </dd>
+        </dl>
+
+        <form method="post">
+            <input type="hidden" asp-for="Kitap.ID" />
+            <input type="submit" value="Sil" class="btn btn-danger" /> |
+            <a asp-page="./Index" class="btn btn-dark">
+                <i class="fas fa-home"></i> &nbsp;
+                Geri Dön
+            </a><br />
+        </form>
+    </div>
+}
+else
+{
+    <h1>Bu Sayfaya Giriş Yetkiniz Yok!!!</h1>
+    <h3>Sayfayı görüntülemek için admin olarak giriş yapınız</h3>
+}

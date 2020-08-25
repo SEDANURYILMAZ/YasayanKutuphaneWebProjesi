@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - YasayanKutuphane</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Clean Blog - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template-->
+    <link href="~/css/clean-blog.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Yaşayan Kütüphane</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial" />
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">@YasayanKutuphane.Resources.Dil.HomePage</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropDown" data-toggle="dropdown">
+                                Admin
+                            </a>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item text-dark" asp-page="/Admin/Kitap/Index"> Kitap </a>
+                                <a class="dropdown-item text-dark" asp-page="/Admin/Yazar/Index"> Yazar </a>
+                                <a class="dropdown-item text-dark" asp-page="/Admin/Cevirmen/Index"> Cevirmen </a>
+                                <a class="dropdown-item text-dark" asp-page="/Admin/Kategori/Index"> Kategori </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-dark" asp-page="/Admin/Dil/Index"> Dil </a>
+                                <a class="dropdown-item text-dark" asp-page="/Admin/Ulke/Index"> Ülke </a>
+                                <a class="dropdown-item text-dark" asp-page="/Admin/Yayinevi/Index"> Yayınevi </a>
+                                <a class="dropdown-item text-dark" asp-page="/Admin/Yorum/Index"> Yorum </a>
+                                <a class="dropdown-item text-dark" asp-page="/Admin/KapakTipi/Index"> Kapak Tipi </a>
+                                <a class="dropdown-item text-dark" asp-page="/Admin/KitapTuru/Index"> Kitap Türü </a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Customer/Kitap/Kitap">Kitaplar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Customer/EKitap/EKitap">Elektronik Kitaplar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Customer/Iletisim/Index">İletişim</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropDown" data-toggle="dropdown">
+                                Language
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item text-dark" asp-page="#">@Html.ActionLink("Türkçe", "DilSecim", "/Customer/Home/Index", new { dil = "tr" }, null)</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-dark" asp-page="/Admin/Yazar/Index">@Html.ActionLink("English", "DilSecim", "/Customer/Home/Index", new { dil = "en" }, null)</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container" style="margin-bottom:200px">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="border-top footer bg-secondary text-white">
+        <div class="container" style="height:20px">
+            &copy; 2019 - YasayanKutuphane - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://kit.fontawesome.com/159a34b587.js" crossorigin="anonymous"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

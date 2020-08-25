@@ -1,0 +1,48 @@
+﻿@page
+@model YasayanKutuphane.Pages.Admin.Kategori.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+@using  Microsoft.AspNetCore.Http;
+@if (HttpContext.Session.GetString("GirisYapanEmail") == "b161210115@sakarya.edu.tr")
+{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+
+    <h1>Sil</h1>
+
+    <h3>Bu Verileri Silmek İstediğine Emin Misin?</h3>
+    <div>
+        <h4>Kategori</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Kategori.Isim)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Kategori.Isim)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Kategori.DisplayOrder)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Kategori.DisplayOrder)
+            </dd>
+        </dl>
+
+        <form method="post">
+            <input type="hidden" asp-for="Kategori.ID" />
+            <input type="submit" value="Sil" class="btn btn-danger" /> |
+            <a asp-page="./Index" class="btn btn-dark">
+                <i class="fas fa-home"></i> &nbsp;
+                Geri Dön
+            </a><br />
+        </form>
+    </div>
+}
+else
+{
+    <h1>Bu Sayfaya Giriş Yetkiniz Yok!!!</h1>
+    <h3>Sayfayı görüntülemek için admin olarak giriş yapınız</h3>
+}

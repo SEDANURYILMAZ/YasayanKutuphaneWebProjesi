@@ -1,0 +1,19 @@
+﻿@page
+@model LockoutModel
+@{
+    ViewData["Title"] = "Locked out";
+}
+
+@using  Microsoft.AspNetCore.Http;
+@if (HttpContext.Session.GetString("GirisYapanEmail") == "b161210115@sakarya.edu.tr")
+{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+else
+{
+    Layout = "~/Pages/Shared/_Layout1.cshtml";
+}
+<header>
+    <h1 class="text-danger">@ViewData["Title"]</h1>
+    <p class="text-danger">This account has been locked out, please try again later.</p>
+</header>

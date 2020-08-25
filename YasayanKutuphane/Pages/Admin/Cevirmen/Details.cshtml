@@ -1,0 +1,66 @@
+﻿@page
+@model YasayanKutuphane.Pages.Admin.Cevirmen.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+@using  Microsoft.AspNetCore.Http;
+@if (HttpContext.Session.GetString("GirisYapanEmail") == "b161210115@sakarya.edu.tr")
+{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+
+    <h1>Ayrıntılar</h1>
+
+    <div>
+        <h4>Cevirmen</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Cevirmen.Ulke)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Cevirmen.Ulke.Isim)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Cevirmen.Isim)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Cevirmen.Isim)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Cevirmen.Soyisim)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Cevirmen.Soyisim)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Cevirmen.DogumTarihi)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Cevirmen.DogumTarihi)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Cevirmen.Cinsiyet)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Cevirmen.Cinsiyet)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-page="./Edit" asp-route-id="@Model.Cevirmen.ID" class="btn btn-info">
+            <i class="fas fa-edit"></i> &nbsp;
+            Güncelle
+        </a><br /><br />
+        <a asp-page="./Index" class="btn btn-dark">
+            <i class="fas fa-home"></i> &nbsp;
+            Geri Dön &nbsp;
+        </a><br />
+    </div>
+}
+else
+{
+    <h1>Bu Sayfaya Giriş Yetkiniz Yok!!!</h1>
+    <h3>Sayfayı görüntülemek için admin olarak giriş yapınız</h3>
+}

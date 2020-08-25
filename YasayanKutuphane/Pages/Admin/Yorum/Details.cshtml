@@ -1,0 +1,54 @@
+﻿@page
+@model YasayanKutuphane.Pages.Admin.Yorum.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+@using  Microsoft.AspNetCore.Http;
+@if (HttpContext.Session.GetString("GirisYapanEmail") == "b161210115@sakarya.edu.tr")
+{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+
+    <h1>Ayrıntılar</h1>
+
+    <div>
+        <h4>Yorum</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Yorum.Kitap)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Yorum.Kitap.ID)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Yorum.YorumTarihi)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Yorum.YorumTarihi)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Yorum.Icerik)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Yorum.Icerik)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-page="./Edit" asp-route-id="@Model.Yorum.ID" class="btn btn-info">
+            <i class="fas fa-edit"></i> &nbsp;
+            Güncelle
+        </a><br /><br />
+        <a asp-page="./Index" class="btn btn-dark">
+            <i class="fas fa-home"></i> &nbsp;
+            Geri Dön  &nbsp;
+        </a><br />
+    </div>
+}
+else
+{
+    <h1>Bu Sayfaya Giriş Yetkiniz Yok!!!</h1>
+    <h3>Sayfayı görüntülemek için admin olarak giriş yapınız</h3>
+}

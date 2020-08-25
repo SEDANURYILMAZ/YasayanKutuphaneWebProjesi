@@ -1,0 +1,74 @@
+﻿@page
+@model YasayanKutuphane.Pages.Admin.Yazar.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@using  Microsoft.AspNetCore.Http;
+@if (HttpContext.Session.GetString("GirisYapanEmail") == "b161210115@sakarya.edu.tr")
+{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+
+    <h1>Güncelle</h1>
+
+    <h4>Yazar</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Yazar.ID" />
+                <div class="form-group">
+                    <label asp-for="Yazar.UlkeID" class="control-label">Ülke</label>
+                    <select asp-for="Yazar.UlkeID" class="form-control" asp-items="ViewBag.UlkeID"></select>
+                    <span asp-validation-for="Yazar.UlkeID" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Yazar.Isim" class="control-label"></label>
+                    <input asp-for="Yazar.Isim" class="form-control" />
+                    <span asp-validation-for="Yazar.Isim" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Yazar.Soyisim" class="control-label"></label>
+                    <input asp-for="Yazar.Soyisim" class="form-control" />
+                    <span asp-validation-for="Yazar.Soyisim" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Yazar.DogumTarihi" class="control-label">Doğum Tarihi</label>
+                    <input asp-for="Yazar.DogumTarihi" class="form-control" />
+                    <span asp-validation-for="Yazar.DogumTarihi" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Yazar.Cinsiyet" class="control-label"></label>
+                    <select asp-for="Yazar.Cinsiyet" class="form-control"></select>
+                    <span asp-validation-for="Yazar.Cinsiyet" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Yazar.Hayati" class="control-label">Hayatı</label>
+                    <input asp-for="Yazar.Hayati" class="form-control" />
+                    <span asp-validation-for="Yazar.Hayati" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Kaydet" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-page="./Index" class="btn btn-dark">
+            <i class="fas fa-home"></i> &nbsp;
+            Geri Dön
+        </a><br />
+    </div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+}
+else
+{
+    <h1>Bu Sayfaya Giriş Yetkiniz Yok!!!</h1>
+    <h3>Sayfayı görüntülemek için admin olarak giriş yapınız</h3>
+}

@@ -1,0 +1,18 @@
+﻿@page
+@model LogoutModel
+@{
+    ViewData["Title"] = "Çıkış Yapıldı";
+}
+@using  Microsoft.AspNetCore.Http;
+@if (HttpContext.Session.GetString("GirisYapanEmail") == "b161210115@sakarya.edu.tr")
+{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+else
+{
+    Layout = "~/Pages/Shared/_Layout1.cshtml";
+}
+<header>
+    <h1>@ViewData["Title"]</h1>
+    <p>Siteden Başarılı Bir Şekilde Çıkıp Yaptınız. Yeniden Görüşmek Dileğiyle</p>
+</header>

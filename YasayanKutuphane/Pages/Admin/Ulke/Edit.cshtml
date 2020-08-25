@@ -1,0 +1,54 @@
+﻿@page
+@model YasayanKutuphane.Pages.Admin.Ulke.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@using  Microsoft.AspNetCore.Http;
+@if (HttpContext.Session.GetString("GirisYapanEmail") == "b161210115@sakarya.edu.tr")
+{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+
+    <h1>Güncelle</h1>
+
+    <h4>Ülke</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Ulke.ID" />
+                <div class="form-group">
+                    <label asp-for="Ulke.Isim" class="control-label"></label>
+                    <input asp-for="Ulke.Isim" class="form-control" />
+                    <span asp-validation-for="Ulke.Isim" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Ulke.DisplayOrder" class="control-label"></label>
+                    <input asp-for="Ulke.DisplayOrder" class="form-control" />
+                    <span asp-validation-for="Ulke.DisplayOrder" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Kaydet" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-page="./Index" class="btn btn-dark">
+            <i class="fas fa-home"></i> &nbsp;
+            Geri Dön
+        </a><br />
+    </div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+}
+else
+{
+    <h1>Bu Sayfaya Giriş Yetkiniz Yok!!!</h1>
+    <h3>Sayfayı görüntülemek için admin olarak giriş yapınız</h3>
+}
