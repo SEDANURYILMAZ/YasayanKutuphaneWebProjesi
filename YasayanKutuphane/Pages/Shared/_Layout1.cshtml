@@ -1,4 +1,4 @@
-﻿@using  Microsoft.AspNetCore.Http;
+@using  Microsoft.AspNetCore.Http;
 
 <!DOCTYPE html>
 <html lang="en">
@@ -51,11 +51,15 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Customer/Iletisim/Index">@YasayanKutuphane.Resources.Dil.Contact</a>
                         </li>
-                        <li class="nav-item">
-                            @Html.ActionLink("Tr", "DilSecim", "/Customer/Home/Index", new { dil = "tr" }, null)
-                        </li>
-                        <li class="nav-item">
-                            @Html.ActionLink("En", "DilSecim", "/Customer/Home/Index", new { dil = "en" }, null)
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropDown" data-toggle="dropdown">
+                                Language
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item text-dark" asp-page="#">@Html.ActionLink("Türkçe", "DilSecim", "/Customer/Home/Index", new { dil = "tr" }, null)</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-dark" asp-page="/Admin/Yazar/Index">@Html.ActionLink("English", "DilSecim", "/Customer/Home/Index", new { dil = "en" }, null)</a>
+                            </div>
                         </li>
                     </ul>
                 </div>
